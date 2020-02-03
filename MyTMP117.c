@@ -93,8 +93,8 @@ void MyTMP117_set_LowLimit(I2C_HandleTypeDef i2c,uint8_t first,uint8_t second)//
 {
       static uint8_t buf[3];
       buf[0]=MyTMP117_TempLowLimit;
-      buf[1]=first;     //Reset Value
-      buf[2]=second;    //Reset Value
+      buf[1]=first;     
+      buf[2]=second;    
       HAL_I2C_Master_Transmit(&i2c,MyTMP117_DeviceID,buf,2,HAL_MAX_DELAY);
       HAL_Delay(1);    
 }
@@ -134,8 +134,8 @@ void MyTMP117_set_EEPROM1(I2C_HandleTypeDef i2c,uint8_t first,uint8_t second) //
 {
       static uint8_t buf[3];
       buf[0]=MyTMP117_EEPROM1;
-      buf[1]=first;     //Reset Value
-      buf[2]=second;    //Reset Value
+      buf[1]=first;     
+      buf[2]=second;    
       HAL_I2C_Master_Transmit(&i2c,MyTMP117_DeviceID,buf,2,HAL_MAX_DELAY);
       HAL_Delay(1); 
 }
@@ -220,6 +220,6 @@ uint16_t MyTMP117_get_ID_Reg(I2C_HandleTypeDef i2c) //This function will return 
       HAL_I2C_Master_Transmit(&i2c,MyTMP117_DeviceID,buf,0,HAL_MAX_DELAY);
       HAL_Delay(1);
       HAL_I2C_Master_Receive(&i2c,MyTMP117_DeviceID,buf,2,HAL_MAX_DELAY);
-			uint16_t ID= ((buf[0]<<8)|buf[1]);
+      uint16_t ID= ((buf[0]<<8)|buf[1]);
       return ID;
 }
