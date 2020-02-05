@@ -1,3 +1,9 @@
+//Library for TMP117-High-Precision-Digital-Temperature-Sensor
+//I have written it using HAL Api.
+//I have not added exception handling in this library because it makes code bulky.
+//you can simply use exception handling in your main function.
+//Hope it helps.
+
 #include "MyTMP117.h"
 
 uint8_t MyTMP117_DeviceID=MyTMP117_GND;
