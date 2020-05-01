@@ -2,7 +2,7 @@
 //I have written it using HAL Api.
 //I have not added exception handling in this library because it makes code bulky.
 //you can simply use exception handling in your main function.
-//Hope it helps.
+//Hope it helps!
 
 
 #ifndef      _MyTMP117_H_
